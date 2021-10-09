@@ -134,7 +134,7 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
         notificationBuilder.setSmallIcon(R.drawable.ic_system_update);
         Intent notificationIntent = new Intent(context, UpdatesActivity.class);
         PendingIntent intent = PendingIntent.getActivity(context, 0, notificationIntent,
-                PendingIntent.FLAG_UPDATE_CURRENT);
+                PendingIntent.FLAG_IMMUTABLE);
         notificationBuilder.setContentIntent(intent);
         notificationBuilder.setContentTitle(context.getString(R.string.new_updates_found_title));
         notificationBuilder.setAutoCancel(true);
